@@ -1,0 +1,43 @@
+<div class="points">
+
+  <div class="selector">
+    <!-- <button mat-button> Previous Gameday</button> -->
+    <h2 style="font-size: 28px; font-weight: 700; color: rgba(240,171,46,.9);">Gameday - <span style="color: #5ac0ec;">{{gameDay}}</span></h2>
+    <!--<button mat-button> Next Gameday</button> -->
+
+  </div>
+
+  <div class="secured">
+    <h2 style="text-align: center; font-size: 24px; font-weight: 600;color: #5ac0ec;">Total Points</h2>
+    <h1 style="font-size: 50px; font-weight: 700; text-align: center;">
+      {{totalPoints}}
+    </h1>
+  </div>
+</div>
+
+<div class="selector" style="margin-top: 50px;" *ngIf="!toShowList">
+  <h2 style="font-size: 28px; font-weight: 700; color: rgba(240,171,46,.9);">Team not found for this gameday.</h2>
+</div>
+
+<div class="main">
+  <h2 style="font-size: 28px; color: #5ac0ec; font-weight: 700;"></h2>
+
+  <div class="player-container" *ngIf="toShowList">
+    <div class="playing-players" *ngFor="let player of toShowList.players">
+      <mat-card>
+        <img mat-card-image [src]="player.image" alt="">
+        <mat-card-content>
+          <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+            {{player.playerName}}
+          </h2>
+          <h2 style="font-size: 24px; text-align: center; color: white; font-weight: 700;">
+            <span style="color: rgba(240, 171, 46, .9);">{{player.points}}</span> Points
+          </h2>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+
+</div>
+

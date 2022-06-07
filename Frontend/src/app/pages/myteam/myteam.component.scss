@@ -1,0 +1,102 @@
+@import url(../fantasy-home/fantasy-home.component.scss);
+
+.main {
+  background-color: #202229;
+}
+
+.player-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.playing-players {
+  width: 22.5%;
+}
+
+mat-divider {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+mat-card {
+  background-color: #31343d;
+  min-height: 350px;
+}
+
+
+.centered-button {
+  margin: auto;
+  width: fit-content;
+  margin-top: 100px;
+}
+
+.save-button {
+  background-color: #31343d;
+  font-family: 'Rift';
+  font-size: 20px;
+  height: 50px;
+  color: white;
+  width: fit-content;
+}
+
+.select-button{
+  background-color: rgba(240, 171, 46, .9);
+  font-family: 'Rift';
+  font-size: 20px;
+  height: 50px;
+}
+
+.example-full-width{
+  width: 45%;
+  border: solid 2px rgba(240, 171, 46, .9);
+  border-radius: 5px;
+}
+
+.form-box{
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-form{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-label{
+  font-family: "Rift";
+  color: white;
+  font-size: 22px;
+  padding: 20px;
+}
+input{
+font-family: "Rift";
+color:rgba(240, 171, 46, .9);
+font-size: 22px;
+padding: 20px !important;
+box-sizing: border-box;
+}
+
+.money {
+  width: 100%;
+  background-color: #202229;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.secured {
+  margin: auto;
+  background-color: #31343d;
+  width: 30%;
+  padding: 20px 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+}

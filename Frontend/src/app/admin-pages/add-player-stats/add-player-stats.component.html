@@ -1,0 +1,42 @@
+<h2 style="font-size: 28px; margin-top:50px" class="underline"> Add Player Stats</h2>
+
+<div class="form-box">
+    <mat-card>
+        <form novalidate #playerStatsForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Fixture Id</mat-label>
+                <input matInput class="numberInput" placeholder="Ex. 1" type="number" id="fid" name="fid" [(ngModel)]="fixtureId" #fid required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Player Id</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" id="playerid" name="playerid" [(ngModel)]="playerStats.pid" #pid required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Kills</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" id="kills" name="kills" [(ngModel)]="playerStats.kills" #kills required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Assists</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" id="assist" name="assist" [(ngModel)]="playerStats.assists" #assist required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Damage</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" id="damage" name="damage" [(ngModel)]="playerStats.damage" #damage required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Survival Time</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" id="stime" name="stime" [(ngModel)]="playerStats.surTime" #stime required>
+              </mat-form-field>
+
+
+              <button mat-button type="submit" class="example-full-width" [disabled] = "playerStatsForm.form.invalid"> Submit </button>
+          </form>
+    </mat-card>
+</div>
+

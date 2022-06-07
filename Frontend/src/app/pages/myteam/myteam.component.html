@@ -1,0 +1,153 @@
+<h2 style="font-size: 28px;" class="underline">My Team</h2>
+<div class="main">
+  <div class="form-box" *ngIf="!toShowList">
+    <h2 style="font-size: 20px; color: rgba(240, 171, 46, .9); font-weight: 700;"> You have not created your team.
+      Create
+      your <span style="color:#5ac0ec">Dream team</span> now.</h2>
+    <form novalidate #tournamentForm="ngForm" class="example-form">
+
+      <section style="width: 100%; display: flex; justify-content: space-around;">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Enter your team name</mat-label>
+          <input matInput type="text" id="teamname" [(ngModel)]="toAddUserTeam.name" name="teamname" #teamname>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Enter Gameday</mat-label>
+          <input matInput type="number" id="fixture" [(ngModel)]="toAddUserTeam.fixtureId" name="fixture" #fixture>
+        </mat-form-field>
+      </section>
+
+    </form>
+    <div class="player-container" style="margin-top: 30px; margin-bottom: 30px; width: 100%;">
+      <div class="playing-players" *ngIf="!selectedPlayer1">
+        <mat-card style="display: flex; justify-content: center; align-items: center;">
+          <h2 style="color: white;">
+            <h2>{{selectedPlayer1}}</h2>
+            <button mat-button class="select-button" (click)="openDialog1()"> Select a Player</button>
+          </h2>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="selectedPlayer1">
+        <mat-card>
+          <img mat-card-image [src]="selectedPlayer1.image" alt="">
+          <mat-card-content>
+            <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+              {{selectedPlayer1.playerName}}
+            </h2>
+            <h2 style="font-size: 32px; text-align: center; font-weight: 700; color: white;">
+            </h2>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="!selectedPlayer2">
+        <mat-card style="display: flex; justify-content: center; align-items: center;">
+          <h2 style="color: white;">
+            <h2>{{selectedPlayer2}}</h2>
+            <button mat-button class="select-button" (click)="openDialog2()"> Select a Player</button>
+          </h2>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="selectedPlayer2">
+        <mat-card>
+          <img mat-card-image [src]="selectedPlayer2.image" alt="">
+          <mat-card-content>
+            <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+              {{selectedPlayer2.playerName}}
+            </h2>
+            <h2 style="font-size: 32px; text-align: center; font-weight: 700; color: white;">
+            </h2>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="!selectedPlayer3">
+        <mat-card style="display: flex; justify-content: center; align-items: center;">
+          <h2 style="color: white;">
+            <h2>{{selectedPlayer3}}</h2>
+            <button mat-button class="select-button" (click)="openDialog3()"> Select a Player</button>
+          </h2>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="selectedPlayer3">
+        <mat-card>
+          <img mat-card-image [src]="selectedPlayer3.image" alt="">
+          <mat-card-content>
+            <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+              {{selectedPlayer3.playerName}}
+            </h2>
+            <h2 style="font-size: 32px; text-align: center; font-weight: 700; color: white;">
+            </h2>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="!selectedPlayer4">
+        <mat-card style="display: flex; justify-content: center; align-items: center;">
+          <h2 style="color: white;">
+            <h2>{{selectedPlayer4}}</h2>
+            <button mat-button class="select-button" (click)="openDialog4()"> Select a Player</button>
+          </h2>
+        </mat-card>
+      </div>
+
+      <div class="playing-players" *ngIf="selectedPlayer4">
+        <mat-card>
+          <img mat-card-image [src]="selectedPlayer4.image" alt="">
+          <mat-card-content>
+            <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+              {{selectedPlayer4.playerName}}
+            </h2>
+            <h2 style="font-size: 32px; text-align: center; font-weight: 700; color: white;">
+            </h2>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+    </div>
+    <button mat-button type="submit" class="save-button" [disabled]="tournamentForm.form.invalid"
+      style="background-color: rgba(240, 171, 46, .9)" (click)="onSubmit()"> Create Team </button>
+
+  </div>
+
+  <div *ngIf="toShowList">
+    <section style="display: flex; justify-content: space-around;">
+
+      <h2
+        style="font-size: 32px; color: rgba(240, 171, 46, .9); font-weight: 700; background-color:#31343d; padding: 16px; border-radius: 5px;">
+        Team Name <i class="bi bi-dash"></i> <span style="color: #5ac0ec;">{{toShowList.name}}</span></h2>
+      <h2
+        style="font-size: 32px; color: rgba(240, 171, 46, .9); font-weight: 700; background-color:#31343d; padding: 16px; border-radius: 5px;">
+        For (UPTO) Gameday <i class="bi bi-dash"></i> <span style="color: #5ac0ec;">{{toShowList.fixtureId}}</span></h2>
+    </section>
+    <div class="player-container" style="margin-top: 50px;">
+      <div class="playing-players" *ngFor="let player of toShowList.players">
+        <mat-card>
+          <img mat-card-image [src]="player.image" alt="">
+          <mat-card-content>
+            <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+              {{player.playerName}}
+            </h2>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
+    <!--<section class="centered-button">
+      <button mat-button class="save-button">Change Team</button>
+    </section>
+    -->
+  </div>
+
+
+
+</div>

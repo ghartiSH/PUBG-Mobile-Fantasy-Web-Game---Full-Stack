@@ -1,0 +1,89 @@
+h1, h2, h3, h4, h5, h6{
+    font-family: "Rift";
+    color: white;
+}
+
+.underline {
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .underline::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    background: rgba(240, 171, 46, .9);
+    width: 50px;
+    bottom: -8px;
+    left: 0;
+  }
+
+  .form-box{
+    padding: 20px 0px;
+  }
+
+  .example-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  ::placeholder {
+    color:rgba(240, 171, 46, .9); 
+  }
+  
+  .example-full-width {
+    width: 45%;
+    margin: 20px 0px;
+    border: solid 1px rgba(240, 171, 46, .9);
+    border-radius: 5px;
+  }
+
+  mat-label{
+      font-family: "Rift";
+      color: white;
+      font-size: 22px;
+      padding: 20px;
+  }
+  input, textarea{
+    font-family: "Rift";
+    color:rgba(240, 171, 46, .9);
+    font-size: 22px;
+    padding: 20px !important;
+    box-sizing: border-box;
+  }
+
+  mat-select{
+    font-family: "Rift";
+    color:rgba(240, 171, 46, .9);
+    font-size: 22px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  mat-option{
+    background-color: #202229;
+    font-family: "Rift";
+    color:rgba(240, 171, 46, .9);
+    font-size: 22px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  mat-card{
+      background-color: #202229;
+  }
+
+  button{
+    color: white;
+    font-family:"Rift";
+    font-size: 22px;
+    padding: 5px 0px;
+    background-color: rgba(240, 171, 46, .9);
+  }
+
+  .numberInput::-webkit-outer-spin-button,
+  .numberInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }

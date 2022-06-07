@@ -1,0 +1,16 @@
+<mat-dialog-content>
+  <div class="player-container">
+    <div class="playing-players" *ngFor="let player of actualPlayerList">
+      <mat-card>
+        <img mat-card-image [src]="player.image" alt="">
+        <mat-card-content>
+          <h2 style="font-size: 24px; text-align: center; color: #5ac0ec; font-weight: 700;">
+            {{player.playerName}} <span style="color: rgba(240,171,46,.9);"> |  </span><span style="color: white;">{{player.team}}</span>
+          </h2>
+          <button mat-button class="select-button" style="background-color:rgba(240,171,46,.9);" (click)="selectClick(player.playerId)"> Select Player</button>
+
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</mat-dialog-content>

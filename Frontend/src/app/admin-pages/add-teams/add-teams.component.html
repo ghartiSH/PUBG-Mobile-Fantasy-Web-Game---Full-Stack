@@ -1,0 +1,40 @@
+<h2 style="font-size: 28px; margin-top:50px" class="underline"> Add Teams</h2>
+
+<div class="form-box">
+    <mat-card>
+        <form novalidate #teamForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Tournament Id</mat-label>
+                <input matInput class="numberInput" placeholder="Ex. 1" type="number" id="trid" name="trid" [(ngModel)]="tournamentId" #name required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Team Id</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" id="teamid" name="teamid" [(ngModel)]="teams.teamId" #name required>
+              </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>Team Name</mat-label>
+              <input matInput placeholder="Ex. Deadeyes Esports" type="text" id="name" name="name" [(ngModel)]="teams.teamName" #name required>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Region</mat-label>
+                <input matInput placeholder="Ex. South Asia" type="text"  id="region" name="region" [(ngModel)]="teams.region" #region required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="Ex. Nepal" type="text"  id="country" name="country"  [(ngModel)]="teams.country" #tier required>
+              </mat-form-field>
+
+              <section class="example-full-width">
+                <mat-label>Choose Team Logo : </mat-label>
+                <input mat-input type="file" id="image" name="image" text="Select Tournament Logo"(change)="onChange($event)">
+              </section>
+
+              <button mat-button type="submit" class="example-full-width" [disabled] = "teamForm.form.invalid"> Submit </button>
+          </form>
+    </mat-card>
+</div>

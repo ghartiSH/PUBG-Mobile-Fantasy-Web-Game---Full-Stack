@@ -1,0 +1,43 @@
+@import url(../home/home.component.scss);
+
+.main {
+  background-color: #202229;
+  padding: 50px;
+}
+
+.tournament-info {
+  display: flex;
+}
+
+mat-divider {
+  margin-top: 20px;
+  background: white;
+}
+
+.rules {
+  margin-top: 30px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+  color: white;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th {
+  color: rgba(240, 171, 46, .9);
+}
+
+td, th {
+  padding: 20px 5px;
+}
+
+tr:nth-child(even) {
+  background-color: #31343d;
+}
+
+.first {
+  color: #5ac0ec;
+}

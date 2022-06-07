@@ -1,0 +1,19 @@
+mat-drawer {
+  width: 150px;
+  background-color: #202229;
+  color: white;
+
+}
+
+mat-drawer-container {
+  height: 100%;
+  background-color: #18191d;
+  color: white;
+  font-family: "Rift";
+}
+
+@media screen and (max-width: 770px) {
+  mat-drawer {
+    display: none;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="points">
+  <div class="selector">
+    <h2 style="font-size: 28px; font-weight: 700; color: rgba(240,171,46,.9);"> Gameday &nbsp; | &nbsp; <span
+      style="color: #5ac0ec;">{{gameDay}}</span></h2>
+      <h2 style="font-size: 28px; font-weight: 700; color: rgba(240,171,46,.9);"> Date &nbsp; | &nbsp; <span
+        style="color: #5ac0ec;">{{gameDate}}</span></h2>
+  </div>
+</div>
+
+
+<div class="main">
+  <table>
+    <tr>
+      <th>Match No.</th>
+      <th>Time</th>
+      <th>Map</th>
+    </tr>
+    <tr *ngFor="let fix of fixtures">
+      <td class="first">{{fix.matchNo}}</td>
+      <td>{{fix.time}}</td>
+      <td><img [src]="fix.map" alt="" height="100px"></td>
+    </tr>
+  </table>
+</div>

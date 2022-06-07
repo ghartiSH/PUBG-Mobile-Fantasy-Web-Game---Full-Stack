@@ -1,0 +1,37 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened="true">
+      <section class="icon">
+        <i class="bi bi-person-circle"></i>
+        <h1>Admin</h1>
+      </section>
+      <mat-divider></mat-divider>
+      <div class="links">
+        <button mat-button routerLink="/admin/add-tournament" routerLinkActive="active"> Add Tournaments</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/tournament-details" routerLinkActive="active"> Tournament Details</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/add-teams" routerLinkActive="active"> Add Team </button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/team-details" routerLinkActive="active"> Team Details</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/add-player" routerLinkActive="active"> Add Players</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/add-news" routerLinkActive="active"> Add News</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/news-details" routerLinkActive="active"> News Details</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/add-fixture" routerLinkActive="active"> Add Fixtures</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/fixture-details" routerLinkActive="active"> Fixture Details</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/add-stats" routerLinkActive="active"> Add Player Statistics</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/player-stats" routerLinkActive="active"> Player Stats details</button>
+        <mat-divider></mat-divider>
+        <button mat-button routerLink="/admin/add-matchday" routerLinkActive="active"> Add MatchDay</button>
+      </div>  
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

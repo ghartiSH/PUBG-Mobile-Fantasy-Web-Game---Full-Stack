@@ -1,0 +1,25 @@
+<div class="loginBox">
+    <h1 style="font-size: 40px; font-weight: 700;" class="underline">
+        Login
+    </h1>
+    <mat-card class="loginForm">
+        <form novalidate #loginForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>Username</mat-label>
+              <input matInput type="text"  id="Username" name="userName" [(ngModel)]="login.userName" #userName required>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput type="text"  id="password" name="password" [(ngModel)]="login.password" #password required>
+              </mat-form-field>
+
+            
+              <button mat-button type="submit" class="example-full-width" [disabled] = "loginForm.form.invalid"> Login </button>
+          </form>
+          <section>
+            <h2>Don't have account?<span style="margin-left: 10px;"><a routerLink="/register">Create an Account</a></span></h2>
+        </section>
+    </mat-card>
+</div>

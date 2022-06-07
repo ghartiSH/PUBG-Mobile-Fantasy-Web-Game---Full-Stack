@@ -1,0 +1,46 @@
+@import url(../home/home.component.scss);
+
+.headline {
+
+  display: flex;
+}
+
+.big-news {
+  margin: auto;
+  width: 66.3%;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.small-news {
+  margin: auto;
+  width: 32.4%;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.regular-news {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.headline-news {
+  color: white;
+  padding: 330px 20px 20px 20px;
+  border-bottom: solid 4px rgba(240, 171, 46, .9);
+}
+
+.headline-news-small {
+  height: 50%;
+  color: white;
+  padding: 78px 20px 20px 20px;
+  border-bottom: solid 4px rgba(240, 171, 46, .9);
+  margin-bottom: 18px;
+}
+
+mat-card{
+  height: fit-content;
+}
+

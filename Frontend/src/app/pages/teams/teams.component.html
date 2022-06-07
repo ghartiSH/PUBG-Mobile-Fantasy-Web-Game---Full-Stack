@@ -1,0 +1,26 @@
+<div class="main">
+  <h2 style="font-size: 32px; color: white;" class="underline">
+    Teams in this tournament
+  </h2>
+
+  <div class="player-container" >
+
+    <div class="playing-players" *ngFor="let team of teams">
+      <mat-card>
+        <img mat-card-image [src]="team.image" alt="">
+        <mat-card-content>
+          <h2 style="font-size: 32px; text-align: center; color: #5ac0ec; font-weight: 700;">
+            {{team.teamName}}
+          </h2>
+          <h2 style="font-size: 24px; text-align: center; font-weight: 700; color: white;">
+            {{team.region}}
+          </h2>
+          <h2 style="font-size: 24px; text-align: center; font-weight: 700; color: white;">
+            {{team.country}}
+          </h2>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+  </div>
+</div>

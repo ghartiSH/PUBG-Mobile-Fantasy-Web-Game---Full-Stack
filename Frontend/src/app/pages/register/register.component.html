@@ -1,0 +1,37 @@
+<div class="loginBox">
+    <h1 style="font-size: 40px; font-weight: 700;" class="underline">
+        Register New Account
+    </h1>
+    <mat-card class="registerForm">
+        <form novalidate #registerForm="ngForm" class="example-form" (ngSubmit)="onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>Username</mat-label>
+              <input matInput type="text"  id="name" name="name" #name [(ngModel)]="user.username" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Email</mat-label>
+                <input matInput type="text"  id="email" name="email" #email [(ngModel)]="user.email" required>
+              </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter New Password</mat-label>
+                <input matInput type="password"  id="password" name="password" #password [(ngModel)]="user.password" required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput type="password"  id="cpassword" name="cpassword" #cpassword [(ngModel)]="confirmPass" required>
+              </mat-form-field>
+
+            
+              <button mat-button type="submit" class="example-full-width" [disabled] = "registerForm.form.invalid"> Create Account </button>
+          </form>
+          <section>
+            <h2>Already have account?<span style="margin-left: 10px;"><a routerLink="/login">Login</a></span></h2>
+        </section>
+    </mat-card>
+</div>
+
+

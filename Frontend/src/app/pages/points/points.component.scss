@@ -1,0 +1,35 @@
+@import url(../myteam/myteam.component.scss);
+
+.points {
+  background-color: #202229;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.points {
+  padding: 20px;
+}
+
+.selector {
+  display: flex;
+  justify-content: space-around;
+}
+
+.secured {
+  margin: auto;
+  background-color: #31343d;
+  width: fit-content;
+  padding: 50px 100px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+button{
+  color: white;
+  font-family:"Rift";
+  font-size: 22px;
+  background-color: rgba(240, 171, 46, .9);
+}
+

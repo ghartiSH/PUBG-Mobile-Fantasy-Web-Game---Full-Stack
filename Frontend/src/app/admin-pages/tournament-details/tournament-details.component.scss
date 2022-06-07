@@ -1,0 +1,22 @@
+@import url(../add-tournament/add-tournament.component.scss);
+
+table{
+    width: 100%;
+    background-color: transparent;
+}
+
+th,td{
+    color: white;
+    font-family: "Rift";
+    text-align: center !important;
+    font-size: 18px !important;
+}
+
+th{
+    color: #5ac0ec;
+}
+
+button{
+    margin: 0px 5px;
+    padding: 0px 10px;
+}

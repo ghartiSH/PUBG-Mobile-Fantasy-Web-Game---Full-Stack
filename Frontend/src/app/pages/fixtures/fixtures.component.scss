@@ -1,0 +1,25 @@
+@import url(../points/points.component.scss);
+
+table {
+  width: 100%;
+  text-align: center;
+  color: white;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+th {
+  color: rgba(240, 171, 46, .9);
+}
+
+td, th {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #31343d;
+}
+
+.first {
+  color: #5ac0ec;
+}

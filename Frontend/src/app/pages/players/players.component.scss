@@ -1,0 +1,19 @@
+@import url(../myteam/myteam.component.scss);
+
+
+.player-container {
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.playing-players {
+  margin-bottom: 20px;
+}
+
+.select-button {
+  background-color: transparent;
+  width: 100%;
+  font-family: 'Rift';
+  height: 50px;
+  color: white;
+}

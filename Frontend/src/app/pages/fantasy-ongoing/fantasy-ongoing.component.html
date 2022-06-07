@@ -1,0 +1,25 @@
+<div class="tournaments left">
+    <h2 style="font-size:36px; margin-bottom:30px;font-weight: 700;" class="underline">Ongoing Tournaments</h2>
+    <section>
+      <mat-card class="tournament-card" *ngFor="let ong of ongoing">
+        <section class="info left">
+          <img mat-card-sm-image [src]="ong.image">
+          <section style="margin-left: 20px;">
+            <h1 style="font-size: 32px;">
+              {{ong.tournamentName}}
+            </h1>
+            <section style="display: flex;">
+              <p><i class="bi bi-award"></i>Tier {{ong.tier}}</p>
+              <p class="detail"><i class="bi bi-coin"></i>$ {{ong.prizePool}}</p>
+              <p class="detail"><i class="bi bi-geo-alt"></i> {{ong.region}}</p>
+            </section>
+          </section>
+        </section>
+  
+        <section class="details">
+          <button mat-button style="padding:8px;" (click)="playFantasy(ong.tournamentId)">Play Now</button>
+        </section>
+      </mat-card>
+    </section>
+  </div>
+  

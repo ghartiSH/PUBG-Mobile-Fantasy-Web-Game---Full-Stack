@@ -1,0 +1,34 @@
+@import url(../../admin-pages/add-tournament/add-tournament.component.scss);
+
+.intro{
+    background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(253, 197, 94, 0.9));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    font-size: 64px; 
+    text-align: center; 
+    margin-left: 50px; 
+    font-weight: 900;
+}
+
+.more{
+    margin-top: 50px;
+}
+
+.teams{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+}
+
+.team-card{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

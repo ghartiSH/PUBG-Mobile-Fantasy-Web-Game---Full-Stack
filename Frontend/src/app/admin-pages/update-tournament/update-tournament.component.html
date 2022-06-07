@@ -1,0 +1,44 @@
+<h2 style="font-size: 28px;margin-top: 50px;" class="underline"> Update Tournament </h2>
+
+<div class="form-box">
+    <mat-card>
+        <form novalidate #updateTournamentForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>Tournament Name</mat-label>
+              <input matInput placeholder="Ex. PMPL South Asia" type="text" [(ngModel)]="tournament.tournamentName" id="name" name="name" #name required>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Region</mat-label>
+                <input matInput placeholder="Ex. South Asia" type="text" [(ngModel)]="tournament.region" id="region" name="region" #region required>
+              </mat-form-field>
+
+              <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Choose a Start Date</mat-label>
+                <input matInput [matDatepicker]="picker" type="text" [(ngModel)]="tournament.startDate" id="startdate" name="startdate" #startdate required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+              <mat-form-field  class="example-full-width" appearance="fill">
+                <mat-label>Choose a End Date</mat-label>
+                <input matInput [matDatepicker]="picker1" type="text" [(ngModel)]="tournament.endDate" id="enddate" name="enddate"  #enddate required>
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+    
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Tier</mat-label>
+                <input matInput placeholder="Ex. S tier" type="text" [(ngModel)]="tournament.tier" id="tier" name="tier" #tier required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Prizepool</mat-label>
+                <input matInput  class="numberInput" placeholder="Ex. 500000" type="number" [(ngModel)]="tournament.prizePool" id="prizepool" name="prizepool" #prizepool required>
+              </mat-form-field>
+              
+              <button mat-button type="submit" class="example-full-width" [disabled] = "updateTournamentForm.form.invalid"> Submit </button>
+          </form>
+    </mat-card>
+</div>

@@ -1,0 +1,61 @@
+mat-drawer {
+    background-color: #202229;
+    color:white;
+    padding: 20px;    
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    font-family: "Rift";
+    color: rgba(240, 171, 46, .9); 
+}
+
+  .icon{
+    text-align: center;
+
+    i{
+      font-size: 80px;
+      color: #5ac0ec;
+    }
+  }
+  .links{
+    display: flex;
+    flex-direction: column;
+  }
+
+  button{
+    font-family: "Rift";
+    font-size: 20px;
+    font-weight: 500;
+    margin:10px 0px;
+  }
+  button:hover{
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(240, 171, 46, .9));
+    color: rgba(240, 171, 46, .9);
+  }
+
+  .active{
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), rgba(240, 171, 46, .9));
+    color: rgba(240, 171, 46, .9);
+  }
+
+  mat-drawer-content{
+    padding: 0px 50px;
+  }
+  
+  mat-drawer-container {
+    height: 100%;
+    background-color: #18191d;
+    color: white;
+    font-family: "Rift";
+  }
+  mat-divider{
+    border-color: #5ac0ec;
+  }
+
+
+  @media screen and (max-width: 770px) {
+    mat-drawer {
+      display: none;
+    }
+  }
+  

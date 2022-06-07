@@ -1,0 +1,30 @@
+@import url(../../admin-pages/add-tournament/add-tournament.component.scss);
+.loginBox{
+    width: 30%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.example-full-width{
+    width: 100%;
+}
+
+input{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.loginForm{
+    margin-top: 50px;
+    padding: 50px;;
+}
+
+a{
+    font-family: "Rift";
+    color:rgba(240, 171, 46, .9);
+    font-size: 16px;
+    font-style: italic;
+    text-decoration: underline;
+}
+a:hover{
+    color: #5ac0ec;
+}

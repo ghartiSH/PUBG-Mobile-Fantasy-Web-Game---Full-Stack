@@ -1,0 +1,42 @@
+<div class="navbar">
+  <ul class="links">
+    <li routerLink="/home" routerLinkActive="active"
+    *ngIf="loginService.roleMatch(['user'])">
+      <i class="bi bi-house"></i>
+      <p>Home</p>
+    </li>
+    <li routerLink="/tournaments" routerLinkActive="active" 
+    *ngIf="loginService.roleMatch(['user'])"
+    >
+      <i class="bi bi-trophy"></i>
+      <p>Tournaments</p>
+    </li>
+    <li routerLink="/news" routerLinkActive="active"
+    *ngIf="loginService.roleMatch(['user'])"
+    >
+      
+      <i class="bi bi-newspaper"></i>
+      <p>News</p>
+    </li>
+    <li routerLink="/fongoing" routerLinkActive="active"
+    *ngIf="loginService.roleMatch(['user'])"
+    >
+      <i class="bi bi-controller"></i>
+      <p>Fantasy</p>
+    </li>
+    <li routerLink="/admin" routerLinkActive="active" 
+      *ngIf="loginService.roleMatch(['admin'])"
+    >
+      <i class="bi bi-person-workspace"></i>
+      <p>Admin</p>
+    </li>
+
+    <li *ngIf="! isLoggedIn()" routerLink="/login" routerLinkActive="active" >
+      <i class="bi bi-person-check-fill"></i>
+      <p>Login</p>
+      </li>
+      <li>
+        <button *ngIf="isLoggedIn()"  mat-button (click)="logOut()"> <span style="font-size:24px ;"><i class="bi bi-box-arrow-left"></i></span><br>Logout</button>
+    </li>
+  </ul>
+</div>

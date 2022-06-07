@@ -1,0 +1,28 @@
+<h2 style="font-size: 28px; margin-top:50px" class="underline"> Add MatchDay</h2>
+
+<div class="form-box">
+    <mat-card>
+        <form novalidate #matchDayForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Tournament Id</mat-label>
+                <input matInput class="numberInput" placeholder="Ex. 1" type="number" id="trid" name="trid" [(ngModel)]="tournamentId" #name required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill" >
+                <mat-label>Day</mat-label>
+                <input matInput class="numberInput"  placeholder="Ex. 1" type="number" [(ngModel)]="matchDay.matchDay" id="day" name="day"  #day required>
+              </mat-form-field>
+
+              <mat-form-field  class="example-full-width" appearance="fill" style="width: 60%;">
+                <mat-label>Choose the date</mat-label>
+                <input matInput [matDatepicker]="picker1" type="text" [(ngModel)]="matchDay.date" id="date" name="date"  #date>
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+
+              <button mat-button type="submit" class="example-full-width" [disabled] = "matchDayForm.form.invalid"> Submit </button>
+          </form>
+    </mat-card>
+</div>
+

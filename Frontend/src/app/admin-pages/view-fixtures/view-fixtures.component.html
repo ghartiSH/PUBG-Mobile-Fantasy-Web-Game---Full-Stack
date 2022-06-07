@@ -1,0 +1,12 @@
+    <div class="more">
+        <h2 style="font-size: 28px;" class="underline"> More Details</h2>
+        <mat-card>
+            <h2 style="color: #5ac0ec; font-size: 28px;">Fixture ID : <span style="color: rgba(240, 171, 46, .9);"> {{fixture.fid}}</span> </h2>
+            <h2 style="color: #5ac0ec; font-size: 28px;">Match No. : <span style="color: rgba(240, 171, 46, .9);"> {{fixture.matchNo}}</span> </h2>
+            <h2 style="color: #5ac0ec; font-size: 28px;">Time : <span style="color: rgba(240, 171, 46, .9);"> {{fixture.time}}</span> </h2>
+            <section style="display: flex; align-items: center;">
+                <h2 style="color: #5ac0ec; font-size: 28px;">Map :</h2> 
+                <img mat-card-lg-image [src]="imagefile" style="margin-left: 10px;">
+            </section>
+        </mat-card>
+    </div>

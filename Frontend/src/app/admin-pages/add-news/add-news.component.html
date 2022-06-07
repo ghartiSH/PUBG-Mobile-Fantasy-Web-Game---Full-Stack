@@ -1,0 +1,33 @@
+<h2 style="font-size: 28px; margin-top:50px" class="underline"> Add News</h2>
+
+<div class="form-box">
+    <mat-card>
+        <form novalidate #newssForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>News Heading</mat-label>
+              <input matInput type="text" [(ngModel)]="news.heading" id="heading" name="heading" #heading required>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Content</mat-label>
+                <textarea matInput class="numberInput"
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="5"
+                    [(ngModel)]="news.content" id="content" name="content" #content
+                    required
+                    >
+                </textarea>
+              </mat-form-field>
+
+              <section class="example-full-width" style="width: 60%;">
+                <mat-label>Choose Image : </mat-label>
+                <input mat-input type="file" id="image" name="image" text="Select Tournament Logo"(change)="onChange($event)">
+              </section>
+
+              <button mat-button type="submit" class="example-full-width" [disabled] ="newssForm.form.invalid"> Submit </button>
+          </form>
+    </mat-card>
+</div>

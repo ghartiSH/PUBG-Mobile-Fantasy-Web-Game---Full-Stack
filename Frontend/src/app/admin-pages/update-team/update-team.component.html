@@ -1,0 +1,26 @@
+<h2 style="font-size: 28px; margin-top:50px" class="underline">Update Team </h2>
+
+<div class="form-box">
+    <mat-card>
+        <form novalidate #updateTeamForm="ngForm" class="example-form" (ngSubmit) = "onSubmit()">
+
+            <mat-form-field class="example-full-width" appearance="fill" >
+              <mat-label>Team Name</mat-label>
+              <input matInput placeholder="Ex. Deadeyes Esports" type="text" id="name" name="name" [(ngModel)]="teams.teamName" #name required>
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Region</mat-label>
+                <input matInput placeholder="Ex. South Asia" type="text"  id="region" name="region" [(ngModel)]="teams.region" #region required>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="Ex. Nepal" type="text"  id="country" name="country"  [(ngModel)]="teams.country" #tier required>
+              </mat-form-field>
+
+              <button mat-button type="submit" class="example-full-width" [disabled] = "updateTeamForm.form.invalid"> Submit </button>
+          </form>
+    </mat-card>
+</div>
+
